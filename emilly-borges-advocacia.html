@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilly Borges Advocacia</title>
+    <style>
+        /* CSS interno */
+        @import url('https://fonts.googleapis.com/css2?family=Garamond&display=swap'); /* Importando a fonte Garamond */
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Garamond', serif; /* Alterando a fonte para Garamond */
+            background-color: #f4f4f4; /* Fundo mais suave */
+            color: #333; /* Texto em uma cor mais escura */
+        }
+
+        header {
+            background: linear-gradient(to right, #1a1a1a, #333); /* Gradiente de fundo para um visual moderno */
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; /* Alinha itens em coluna */
+            align-items: center; /* Centraliza itens */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+        }
+
+        header .container {
+            display: flex;
+            flex-direction: column; /* Alinha logo e menu em coluna */
+            align-items: center; /* Centraliza logo e menu */
+            width: 90%;
+            margin: auto;
+        }
+
+        h1 {
+            color: #f0f0f0; /* Cor do título */
+            font-size: 2.5em; /* Tamanho maior do h1 */
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: center; /* Centraliza itens do menu */
+        }
+
+        nav ul li {
+            margin: 0 20px; /* Espaçamento horizontal entre os itens */
+        }
+
+        nav ul li a {
+            color: #f0f0f0; /* Cor do texto do link */
+            text-decoration: none; /* Remove o sublinhado */
+            padding: 10px 15px; /* Espaçamento interno */
+            transition: background 0.3s, color 0.3s, transform 0.3s; /* Transição suave */
+            border-radius: 5px; /* Bordas arredondadas nos links */
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff; /* Azul ao passar o mouse */
+            color: #fff; /* Texto branco ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom */
+        }
+
+        .hero {
+            background: url('images/banner.jpg') center/cover no-repeat;
+            color: #fff;
+            height: 70vh; /* Ajuste no tamanho do fundo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column; /* Centraliza a logo e o texto */
+            filter: brightness(0.7); /* Escurece o fundo da hero para melhor contraste */
+        }
+
+        .hero img {
+            width: 700px; /* Largura maior da logo */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 0px; /* Espaçamento entre a logo e o texto */
+        }
+
+        .hero h1 {
+            font-size: 2.5em; /* Tamanho menor do h1 */
+            margin-bottom: 15px;
+        }
+
+        .section {
+            padding: 60px 0;
+            background-color: #fff; /* Fundo branco para as seções */
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            color: #000;
+            font-size: 2.5em; /* Tamanho maior do h2 */
+        }
+
+        .section p {
+            max-width: 800px;
+            margin: auto;
+            color: #666;
+            font-size: 1.5em; /* Tamanho de fonte maior para descrições */
+        }
+
+        .servicos-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px; /* Espaçamento entre os ícones */
+        }
+
+        .servico {
+            background-color: #e0e0e0; /* Cor de fundo dos serviços */
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px; /* Largura do bloco de serviço */
+            text-align: center;
+            color: #000;
+            transition: transform 0.3s; /* Transição suave */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+            text-decoration: none; /* Remove o sublinhado nos links */
+        }
+
+        .servico:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+
+        .botao-contato {
+            display: inline-block;
+            background-color: #e0e0e0; /* Cor cinza do botão */
+            color: #000; /* Texto preto */
+            padding: 15px 20px; /* Ajuste no padding */
+            border-radius: 8px; /* Bordas arredondadas */
+            text-decoration: none;
+            margin-top: 20px; /* Espaçamento entre os botões */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .botao-contato:hover {
+            background-color: #c0c0c0; /* Cor do botão ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+
+        footer {
+            background-color: #000;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+
+        /* Estilo específico para os textos explicativos */
+        .descricao {
+            color: #666;
+            font-size: 1em; /* Tamanho de fonte menor para descrições */
+            margin-top: 5px; /* Espaçamento acima das descrições */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Emilly Borges Advocacia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#compromisso">Compromisso</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="c:\Users\paula\OneDrive\Imagens\LogoFinal.png" alt="Logo Emilly Borges Advocacia"> <!-- Logo inserida aqui -->
+        <div>
+            <h1>Compromisso com a Justiça e Ética Profissional</h1> <!-- Texto do h1 atualizado -->
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <h2>Sobre Nós</h2>
+        <p>Emilly Borges Advocacia é um escritório especializado em oferecer soluções jurídicas de alta qualidade, focado em resultados e na melhor defesa dos interesses dos nossos clientes.</p>
+    </section>
+
+    <section id="servicos" class="section">
+        <h2>Nossos Serviços</h2>
+        <p>Atuamos em diversas áreas do Direito, sempre com compromisso e ética:</p>
+        <div class="servicos-container">
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Civil." class="servico" target="_blank">
+                <h3>Direito Civil</h3>
+                <p class="descricao">Atuação em questões de propriedade, contratos e responsabilidades civis.</p>
+            </a>
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Trabalhista." class="servico" target="_blank">
+                <h3>Direito Trabalhista</h3>
+                <p class="descricao">Assessoria em questões de relações de trabalho, contratos e direitos trabalhistas.</p>
+            </a>
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Empresarial." class="servico" target="_blank">
+                <h3>Direito Empresarial</h3>
+                <p class="descricao">Consultoria em questões comerciais, societárias e contratuais.</p>
+            </a>
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Consultoria Jurídica." class="servico" target="_blank">
+                <h3>Consultoria Jurídica</h3>
+                <p class="descricao">Orientação e suporte jurídico em diversas áreas do Direito.</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="compromisso" class="section">
+        <h2>Compromisso e Integridade</h2>
+        <p>Entenda como será seu atendimento:</p>
+        <p>Nossos profissionais estão preparados para oferecer um atendimento próximo, respeitoso e com total transparência em todas as etapas do processo.</p>
+        <div class="servicos-container">
+            <div class="servico">
+                <h3>Atendimento Humanizado</h3>
+                <p class="descricao">Focamos em entender suas necessidades e oferecer soluções personalizadas.</p>
+            </div>
+            <div class="servico">
+                <h3>Transparência Total</h3>
+                <p class="descricao">Mantemos você informado sobre cada etapa do seu caso.</p>
+            </div>
+            <div class="servico">
+                <h3>Ética Profissional</h3>
+                <p class="descricao">Atuamos sempre com base em princípios éticos, defendendo seus interesses com responsabilidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações:</p>
+        <a href="https://wa.me/5543998061335?text=Estou%20interessado%20em%20contato!" class="botao-contato" target="_blank">Fale Conosco</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Emilly Borges Advocacia. Todos os direitos reservados.</p>
+        <p>Feito por <a href="https://www.linkedin.com/in/paula-beltrami-303211290/" target="_blank">Paula Beltrami</a></p>
+    </footer>
+</body>
+</html>
