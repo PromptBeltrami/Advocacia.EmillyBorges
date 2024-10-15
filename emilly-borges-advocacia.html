@@ -50,10 +50,11 @@
             margin: 0;
             padding: 0;
             justify-content: center; /* Centraliza itens do menu */
+            flex-wrap: wrap; /* Permite que os itens do menu quebrem para a próxima linha em telas menores */
         }
 
         nav ul li {
-            margin: 0 20px; /* Espaçamento horizontal entre os itens */
+            margin: 0 10px; /* Espaçamento horizontal entre os itens */
         }
 
         nav ul li a {
@@ -73,7 +74,7 @@
         .hero {
             background: url('images/banner.jpg') center/cover no-repeat;
             color: #fff;
-            height: 70vh; /* Ajuste no tamanho do fundo */
+            height: 70vh; /* Ajustado para uma altura menor */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -83,18 +84,19 @@
         }
 
         .hero img {
-            width: 700px; /* Largura maior da logo */
+            width: 80%; /* Reduzido para ser responsivo */
+            max-width: 500px; /* Largura máxima */
             height: auto; /* Mantém a proporção */
-            margin-bottom: 0px; /* Espaçamento entre a logo e o texto */
+            margin-bottom: 20px; /* Espaçamento entre a logo e o texto */
         }
 
         .hero h1 {
             font-size: 2.5em; /* Tamanho menor do h1 */
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .section {
-            padding: 60px 0;
+            padding: 40px 20px; /* Ajustado para ser mais responsivo */
             background-color: #fff; /* Fundo branco para as seções */
             text-align: center;
         }
@@ -105,51 +107,57 @@
             font-size: 2.5em; /* Tamanho maior do h2 */
         }
 
-        .section p {
+        .section p, .section ul {
             max-width: 800px;
             margin: auto;
             color: #666;
-            font-size: 1.5em; /* Tamanho de fonte maior para descrições */
+            font-size: 1.2em; /* Tamanho de fonte um pouco maior */
         }
 
         .servicos-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px; /* Espaçamento entre os ícones */
-        }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
 
-        .servico {
-            background-color: #e0e0e0; /* Cor de fundo dos serviços */
-            border-radius: 8px;
-            padding: 20px;
-            width: 250px; /* Largura do bloco de serviço */
-            text-align: center;
-            color: #000;
-            transition: transform 0.3s; /* Transição suave */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
-            text-decoration: none; /* Remove o sublinhado nos links */
-        }
+.servico {
+    background-color: #e0e0e0; /* Cor de fundo dos serviços */
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px; /* Largura do bloco de serviço */
+    text-align: center;
+    color: #000;
+    transition: transform 0.3s; /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
 
-        .servico:hover {
-            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-        }
+.servico:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
 
-        .botao-contato {
-            display: inline-block;
-            background-color: #e0e0e0; /* Cor cinza do botão */
-            color: #000; /* Texto preto */
-            padding: 15px 20px; /* Ajuste no padding */
-            border-radius: 8px; /* Bordas arredondadas */
-            text-decoration: none;
-            margin-top: 20px; /* Espaçamento entre os botões */
-            transition: background-color 0.3s, transform 0.3s;
-        }
+.servico-link {
+    color: inherit; /* Herda a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: block; /* Para que o link ocupe todo o espaço */
+    height: 100%; /* Para que o link ocupe toda a altura do serviço */
+}
 
-        .botao-contato:hover {
-            background-color: #c0c0c0; /* Cor do botão ao passar o mouse */
-            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-        }
+        .botao-servico {
+    display: inline-block;
+    background-color: #808080; 
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px; /* Espaçamento entre os botões */
+}
+
+.botao-servico:hover {
+    background-color: #808080; 
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
 
         footer {
             background-color: #000;
@@ -168,6 +176,39 @@
             color: #666;
             font-size: 1em; /* Tamanho de fonte menor para descrições */
             margin-top: 5px; /* Espaçamento acima das descrições */
+        }
+
+        /* Media Queries para responsividade */
+        @media (max-width: 300px) {
+            .hero {
+                height: 50vh; /* Altura ajustada para telas menores */
+            }
+
+            .hero h1 {
+                font-size: 2em; /* Tamanho menor do h1 para telas menores */
+            }
+
+            .section h2 {
+                font-size: 2em; /* Tamanho menor do h2 */
+            }
+
+            .servico {
+                width: 90%; /* Largura maior em telas menores */
+            }
+
+            nav ul li {
+                margin: 0 5px; /* Reduzir espaçamento em telas menores */
+            }
+        }
+
+        @media (max-width: 100px) {
+            .hero h1 {
+                font-size: 1.5em; /* Tamanho ainda menor do h1 para telas muito pequenas */
+            }
+
+            .section p {
+                font-size: 1em; /* Tamanho de fonte menor para descrições */
+            }
         }
     </style>
 </head>
@@ -195,31 +236,46 @@
 
     <section id="sobre" class="section">
         <h2>Sobre Nós</h2>
-        <p>Emilly Borges Advocacia é um escritório especializado em oferecer soluções jurídicas de alta qualidade, focado em resultados e na melhor defesa dos interesses dos nossos clientes.</p>
+        <p style="font-size: 1.3em;">Emilly Borges Advocacia é um escritório especializado em oferecer soluções jurídicas de alta qualidade, focado em resultados e na melhor defesa dos interesses dos nossos clientes.</p>
     </section>
 
-    <section id="servicos" class="section">
-        <h2>Nossos Serviços</h2>
-        <p>Atuamos em diversas áreas do Direito, sempre com compromisso e ética:</p>
-        <div class="servicos-container">
-            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Civil." class="servico" target="_blank">
+    <section id="contato" class="section">
+        <h2>Entre em Contato</h2>
+        <a href="https://wa.me/5543998061335?text=Gostaria%20de%20saber%20mais" class="botao-servico">Entre em Contato</a>
+    </section>
+
+   <section id="servicos" class="section">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos-container">
+        <div class="servico">
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Civil." target="_blank" class="servico-link">
                 <h3>Direito Civil</h3>
-                <p class="descricao">Atuação em questões de propriedade, contratos e responsabilidades civis.</p>
-            </a>
-            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Trabalhista." class="servico" target="_blank">
-                <h3>Direito Trabalhista</h3>
-                <p class="descricao">Assessoria em questões de relações de trabalho, contratos e direitos trabalhistas.</p>
-            </a>
-            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Empresarial." class="servico" target="_blank">
-                <h3>Direito Empresarial</h3>
-                <p class="descricao">Consultoria em questões comerciais, societárias e contratuais.</p>
-            </a>
-            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Consultoria Jurídica." class="servico" target="_blank">
-                <h3>Consultoria Jurídica</h3>
-                <p class="descricao">Orientação e suporte jurídico em diversas áreas do Direito.</p>
+                <p class="descricao">Assessoria em questões de natureza civil, incluindo contratos, obrigações e responsabilidade civil.</p>
             </a>
         </div>
-    </section>
+        <div class="servico">
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Trabalhista." target="_blank" class="servico-link">
+                <h3>Direito Trabalhista</h3>
+                <p class="descricao">Consultoria e representação em demandas trabalhistas, visando proteger os direitos dos trabalhadores e empregadores.</p>
+            </a>
+        </div>
+        <div class="servico">
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Direito Empresarial." target="_blank" class="servico-link">
+                <h3>Direito Empresarial</h3>
+                <p class="descricao">Apoio jurídico em questões empresariais, como constituição de empresas, contratos e litígios.</p>
+            </a>
+        </div>
+        <div class="servico">
+            <a href="https://wa.me/5543998061335?text=Gostaria de saber mais sobre Consultoria Jurídica." target="_blank" class="servico-link">
+                <h3>Consultoria Jurídica</h3>
+                <p class="descricao">Orientação e análise de situações jurídicas para uma melhor tomada de decisão.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+    
+    
 
     <section id="compromisso" class="section">
         <h2>Compromisso e Integridade</h2>
@@ -241,14 +297,8 @@
         </div>
     </section>
 
-    <section id="contato" class="section">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para mais informações:</p>
-        <a href="https://wa.me/5543998061335?text=Estou%20interessado%20em%20contato!" class="botao-contato" target="_blank">Fale Conosco</a>
-    </section>
-
     <footer>
-        <p>&copy; 2024 Emilly Borges Advocacia. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Advocacia Emilly Borges - Todos os direitos reservados. </p>
         <p>Feito por <a href="https://www.linkedin.com/in/paula-beltrami-303211290/" target="_blank">Paula Beltrami</a></p>
     </footer>
 </body>
